@@ -1,66 +1,55 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Aplicación adoclick - Ezequiel Almeira
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+```markdown
+# Documentación de la Aplicación
 
-## About Laravel
+## Descripción
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Esta aplicación utiliza Laravel para interactuar con una API pública, extraer datos y almacenarlos en la base de datos. Además, proporciona una API propia para consumir estos datos y realizar diversas operaciones.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Instalación
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clona este repositorio en tu máquina local.
+2. Ejecuta `composer install` para instalar las dependencias de PHP.
+3. Copia el archivo `.env.example` y renómbralo como `.env`.
+4. Configura tu base de datos en el archivo `.env`.
+5. Ejecuta `php artisan key:generate` para generar una nueva clave de aplicación.
+6. Ejecuta `php artisan migrate --seed` para crear y poblar la base de datos con los datos necesarios.
+7. Ejecuta `php artisan serve` para iniciar el servidor de desarrollo.
 
-## Learning Laravel
+## Ejecución de Pruebas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Pruebas Unitarias
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Para ejecutar todas las pruebas unitarias:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+php artisan test
+```
 
-## Laravel Sponsors
+Para ejecutar pruebas específicas, puedes especificar el archivo que contiene la prueba que deseas ejecutar:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+php artisan test tests/Unit/EntityTest.php
+```
 
-### Premium Partners
+## Interpretación de Resultados
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Después de ejecutar las pruebas, recibirás información sobre el éxito o fallo de cada prueba. Aquí hay algunas pautas generales para interpretar los resultados:
 
-## Contributing
+- **Éxito de la Prueba**: Si una prueba pasa exitosamente, verás un mensaje de éxito indicando que la prueba se ha completado correctamente.
+  
+- **Fallo de la Prueba**: Si una prueba falla, verás un mensaje de error indicando el motivo del fallo. Esto puede incluir información sobre la aserción que falló y, en algunos casos, una traza de la pila para ayudarte a identificar el problema.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Estadísticas de Pruebas**: Al final de la ejecución de las pruebas, recibirás estadísticas que te indicarán cuántas pruebas se ejecutaron, cuántas pasaron con éxito y cuántas fallaron.
 
-## Code of Conduct
+Es importante revisar cuidadosamente los resultados de las pruebas, especialmente las pruebas que fallaron, para identificar y corregir los problemas en tu código.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Recuerda también revisar los logs generados por Laravel en caso de que haya errores inesperados que no estén relacionados directamente con las pruebas, ya que pueden proporcionar pistas adicionales sobre posibles problemas en tu aplicación.
 
-## Security Vulnerabilities
+## Licencia
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+```
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Este README proporciona una guía básica sobre cómo instalar la aplicación, ejecutar pruebas unitarias, interpretar los resultados de las pruebas y otros detalles importantes. Puedes personalizarlo según las necesidades específicas de tu aplicación.
