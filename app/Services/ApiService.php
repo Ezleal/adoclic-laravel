@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 
 class ApiService
 {
-    protected $baseUrl;
+    public $baseUrl;
 
      public function __construct()
      {
