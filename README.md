@@ -1,7 +1,6 @@
 Aplicación adoclick - Ezequiel Almeira
 
-```markdown
-# Documentación de la Aplicación
+## Documentación de la Aplicación
 
 ## Descripción
 
