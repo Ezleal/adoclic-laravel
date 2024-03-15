@@ -50,4 +50,4 @@ Recuerda también revisar los logs generados por Laravel en caso de que haya err
 Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
 ```
 
-Este README proporciona una guía básica sobre cómo instalar la aplicación, ejecutar pruebas unitarias, interpretar los resultados de las pruebas y otros detalles importantes. Puedes personalizarlo según las necesidades específicas de tu aplicación.
+Este README proporciona una guía básica sobre cómo instalar la aplicación, ejecutar pruebas unitarias, interpretar los resultados de las pruebas y otros detalles importantes.
